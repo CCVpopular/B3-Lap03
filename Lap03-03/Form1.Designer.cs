@@ -119,6 +119,7 @@
             dataGridView1.ColumnHeadersHeight = 29;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
             dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Enabled = false;
             dataGridView1.Location = new Point(0, 95);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
@@ -175,6 +176,7 @@
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Quản lý Sinh Viên";
+            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);
@@ -194,11 +196,11 @@
         private ToolStripButton toolStripButton1;
         private ToolStripTextBox toolStripTextBox1;
         private ToolStripLabel toolStripLabel1;
-        private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
+        public DataGridView dataGridView1;
     }
 }
