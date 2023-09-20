@@ -1,3 +1,4 @@
+﻿using Microsoft.VisualBasic.Devices;
 using System.Data;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
@@ -29,25 +30,27 @@ namespace Lap03_03
             this.Close();
         }
 
-        /*private void sreach(object sender, EventArgs e)
+ /*       private void SearchStudent(string keyword)
         {
-            string sreach = toolStripTextBox1.Text.ToLower();
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                string studentName = row.Cells[3].Value.ToString().ToLower();
+            dataGridView1.Rows.Clear();
 
-                if (studentName.Contains(sreach))
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                if (dataGridView1.Rows[1].Cells[i].Value.Contains(keyword))
                 {
-                    row.Visible = true;
-                }
-                else
-                {
-                    row.Visible = false;
+
                 }
             }
 
-        }*/
-
+            foreach (DataGridView)
+            {
+                if (student.Name.Contains(keyword) || student.StudentID.Contains(keyword))
+                {
+                    dataGridView1.Rows.Add(student.StudentID, student.Name, student.Age);
+                }
+            }
+        }
+ */
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem11_Click((object)sender, e);

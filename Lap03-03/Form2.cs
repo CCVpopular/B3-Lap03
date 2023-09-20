@@ -30,9 +30,11 @@ namespace Lap03_03
                 {
                     throw new Exception("Vui long nhap day du thong tin sinh vien!");
                 }
-
-                float.TryParse(textBox3.Text, out float Diem);
-                int chondong = dulieu(textBox1.Text, Diem);
+                int chondong = dulieu(textBox1.Text);
+                if (float.Parse(textBox3.Text) < 0 || float.Parse(textBox3.Text) > 10)
+                {
+                    throw new Exception("tttt");
+                }
                 if (chondong == -1)
                 {
                     chondong = form1.dataGridView1.Rows.Add();
@@ -43,10 +45,7 @@ namespace Lap03_03
                 {
                     MessageBox.Show("Nhập trùng Mã số sinh viên!", "thông báo", MessageBoxButtons.OK);
                 }
-                if (Diem < 0 && Diem > 10)
-                {
-                    MessageBox.Show("Vui lòng nhập điểm trong phạm vi từ 1 đến 10!", "Thong bao", MessageBoxButtons.OK);
-                }
+
 
             }
             catch (Exception ex)
@@ -55,7 +54,7 @@ namespace Lap03_03
             }
         }
 
-        public int dulieu(string MSSV, float Diem)
+        public int dulieu(string MSSV)
         {
             for (int i = 0; i < form1.dataGridView1.Rows.Count; i++)
             {
@@ -84,5 +83,6 @@ namespace Lap03_03
         {
             this.Close();
         }
+
     }
 }
